@@ -12,12 +12,11 @@ public class Animal {
 	private String genero;
 	private ArrayList<Zona> zona;
 	
-	public Animal(String nombre, int edad, String habitat, String genero, ArrayList<Zona> zona) {
+	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
-		this.setZona(zona);
 		totalAnimales++;
 	}
 	
@@ -95,7 +94,7 @@ public class Animal {
 		return zona;
 	}
 
-	public void setZona(ArrayList<Zona> zona) {
-		this.zona = zona;
+	public void setZona(Zona zona) {
+		this.zona.add(zona);
 	}
 }

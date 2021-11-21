@@ -11,12 +11,11 @@ public class Anfibio extends Animal{
 	private String colorPiel;
 	private boolean venenoso;
 	
-	public Anfibio(String nombre, int edad, String habitat, String genero, ArrayList<Zona> zona, String color, boolean venenoso) {
+	public Anfibio(String nombre, int edad, String habitat, String genero, String color, boolean venenoso) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
-		this.setZona(zona);
 		this.setColorPiel(color);
 		this.setVenenoso(venenoso);
 		setTotalAnimales(getTotalAnimales() + 1);
@@ -31,14 +30,14 @@ public class Anfibio extends Animal{
 		return listado.size();
 	}
 	
-	static public Anfibio crearRana(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Anfibio crearRana(String nombre, int edad, String genero) {
 		ranas++;
-		return new Anfibio(nombre, edad, "selva",genero, zona,"rojo", true);
+		return new Anfibio(nombre, edad, "selva",genero,"rojo", true);
 	}
 	
-	static public Anfibio crearSalamandra(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Anfibio crearSalamandra(String nombre, int edad, String genero) {
 		salamandras++;
-		return new Anfibio(nombre, edad, "selva",genero, zona,"negro y amarillo", false);
+		return new Anfibio(nombre, edad, "selva",genero,"negro y amarillo", false);
 	}
 	
 	@Override

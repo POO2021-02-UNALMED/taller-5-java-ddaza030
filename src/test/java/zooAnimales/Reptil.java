@@ -11,12 +11,11 @@ public class Reptil extends Animal {
 	private String colorEscamas;
 	private int largoCola;
 	
-	public Reptil(String nombre, int edad, String habitat, String genero, ArrayList<Zona> zona, String color, int largo) {
+	public Reptil(String nombre, int edad, String habitat, String genero, String color, int largo) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
-		this.setZona(zona);
 		this.setColorEscamas(color);
 		this.setLargoCola(largo);
 		setTotalAnimales(getTotalAnimales() + 1);
@@ -37,14 +36,14 @@ public class Reptil extends Animal {
 		return "reptar";
 	}
 	
-	static public Reptil crearIguana(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Reptil crearIguana(String nombre, int edad, String genero) {
 		iguanas++;
-		return new Reptil(nombre, edad, "humedal",genero, zona,"verde", 3);
+		return new Reptil(nombre, edad, "humedal",genero,"verde", 3);
 	}
 	
-	static public Reptil crearSerpiente(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Reptil crearSerpiente(String nombre, int edad, String genero) {
 		serpientes++;
-		return new Reptil(nombre, edad, "jungla",genero, zona,"blanco", 1);
+		return new Reptil(nombre, edad, "jungla",genero,"blanco", 1);
 	}
 	
 	public String getColorEscamas() {

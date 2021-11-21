@@ -7,10 +7,10 @@ public class Zona {
 	private Zoologico zoo;
 	private ArrayList<Animal> animales;
 	
-	public Zona(String nombre, Zoologico zoo, ArrayList<Animal> animales) {
+	public Zona(String nombre, Zoologico zoo) {
 		this.setAnimales(animales);
 		this.setZoo(zoo);
-		this.setAnimales(animales);
+		zoo.agregarZonas(this);
 	}
 	
 	public Zona() {
@@ -38,11 +38,14 @@ public class Zona {
 	}
 
 	public void setAnimales(ArrayList<Animal> animales) {
-		this.animales = animales;
+		for(int i = 0; i < animales.size();i++) {
+			animales.get(i).setZona(this);
+		}
 	}
 	
 	public void agregarAnimales() {
 		animales.add(new Animal());
+		animales.get(animales.size()-1).setZona(this);
 	}
 	
 	public int cantidadAnimales() {

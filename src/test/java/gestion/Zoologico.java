@@ -34,8 +34,8 @@ public class Zoologico {
 		return zonas;
 	}
 
-	public void setZonas(ArrayList<Zona> zonas) {
-		this.zonas = zonas;
+	public void setZonas(Zona zona) {
+		this.zonas.add(zona);
 	}
 	
 	
@@ -50,6 +50,7 @@ public class Zoologico {
 	
 	public void agregarZonas(Zona zona) {
 		zonas.add(zona);
+		zona.setZoo(this);
 	}
 	
 	

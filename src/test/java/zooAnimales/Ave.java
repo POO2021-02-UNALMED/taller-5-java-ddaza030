@@ -10,12 +10,11 @@ public class Ave extends Animal{
 	public static int aguilas;
 	private String colorPlumas;
 	
-	public Ave(String nombre, int edad, String habitat, String genero, ArrayList<Zona> zona, String colorPlumas) {
+	public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
-		this.setZona(zona);
 		this.setColorPlumas(colorPlumas);
 		setTotalAnimales(getTotalAnimales() + 1);
 		listado.add(this);
@@ -34,13 +33,13 @@ public class Ave extends Animal{
 		return "volar";
 	}
 	
-	static public Ave crearHalcon(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Ave crearHalcon(String nombre, int edad, String genero) {
 		halcones++;
-		return new Ave(nombre, edad, "montanas",genero, zona,"cafe glorioso");
+		return new Ave(nombre, edad, "montanas",genero,"cafe glorioso");
 	}
-	static public Ave crearAguila(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Ave crearAguila(String nombre, int edad, String genero) {
 		aguilas++;
-		return new Ave(nombre, edad, "montanas",genero, zona,"blanco y amarillo");
+		return new Ave(nombre, edad, "montanas",genero,"blanco y amarillo");
 	}
 	
 	// get y set
