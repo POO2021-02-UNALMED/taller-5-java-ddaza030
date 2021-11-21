@@ -22,17 +22,21 @@ public class Anfibio extends Animal{
 		setTotalAnimales(getTotalAnimales() + 1);
 		listado.add(this);
 	}
+	public Anfibio() {
+		setTotalAnimales(getTotalAnimales() + 1);
+		listado.add(this);
+	}
 	
 	static public int cantidadAnfibios() {
 		return listado.size();
 	}
 	
-	public Anfibio crearRana(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Anfibio crearRana(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		ranas++;
 		return new Anfibio(nombre, edad, "selva",genero, zona,"rojo", true);
 	}
 	
-	public Anfibio crearSalamandra(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Anfibio crearSalamandra(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		salamandras++;
 		return new Anfibio(nombre, edad, "selva",genero, zona,"negro y amarillo", false);
 	}

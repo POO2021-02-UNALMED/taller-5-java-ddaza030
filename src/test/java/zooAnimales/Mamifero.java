@@ -24,18 +24,23 @@ public class Mamifero extends Animal {
 		
 	}
 	
+	public Mamifero() {
+		setTotalAnimales(getTotalAnimales() + 1);
+		listado.add(this);
+	}
+	
 	static public int cantidadMamiferos() {
 		return listado.size();
 	}
 	
 
 	
-	public Mamifero crearCaballo(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Mamifero crearCaballo(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		caballos++;
 		return new Mamifero(nombre, edad, "pradera",genero, zona,true,4);
 	}
 	
-	public Mamifero crearLeon(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Mamifero crearLeon(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		leones++;
 		return new Mamifero(nombre, edad, "selva",genero, zona,true,4);
 	}

@@ -22,6 +22,10 @@ public class Pez extends Animal{
 		setTotalAnimales(getTotalAnimales() + 1);
 		listado.add(this);
 	}
+	public Pez() {
+		setTotalAnimales(getTotalAnimales() + 1);
+		listado.add(this);
+	}
 	
 	static public int cantidadPeces() {
 		return listado.size();
@@ -32,12 +36,12 @@ public class Pez extends Animal{
 		return "nadar";
 	}
 	
-	public Pez crearSalmon(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Pez crearSalmon(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		salmones++;
 		return new Pez(nombre, edad, "oceano",genero, zona,"rojo", 6);
 	}
 	
-	public Pez crearBacalao(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Pez crearBacalao(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		bacalaos++;
 		return new Pez(nombre, edad, "oceano",genero, zona,"gris", 6);
 	}

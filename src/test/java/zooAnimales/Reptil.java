@@ -22,22 +22,27 @@ public class Reptil extends Animal {
 		setTotalAnimales(getTotalAnimales() + 1);
 		listado.add(this);
 	}
+	public Reptil() {
+		setTotalAnimales(getTotalAnimales() + 1);
+		listado.add(this);
+	}
 	
 	static public int cantidadReptiles() {
 		return listado.size();
 	}
+	
 	
 	@Override
 	public String movimiento() {
 		return "reptar";
 	}
 	
-	public Reptil crearIguana(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Reptil crearIguana(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		iguanas++;
 		return new Reptil(nombre, edad, "humedal",genero, zona,"verde", 3);
 	}
 	
-	public Reptil crearSerpiente(String nombre, int edad, String genero, ArrayList<Zona> zona) {
+	static public Reptil crearSerpiente(String nombre, int edad, String genero, ArrayList<Zona> zona) {
 		serpientes++;
 		return new Reptil(nombre, edad, "jungla",genero, zona,"blanco", 1);
 	}
