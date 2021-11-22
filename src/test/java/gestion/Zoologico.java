@@ -50,7 +50,6 @@ public class Zoologico {
 	
 	public void agregarZonas(Zona zona) {
 		zonas.add(zona);
-		zona.setZoo(this);
 	}
 	
 	

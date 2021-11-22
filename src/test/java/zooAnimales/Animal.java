@@ -21,7 +21,7 @@ public class Animal {
 	}
 	
 	public Animal() {
-		setTotalAnimales(getTotalAnimales() + 1);
+		totalAnimales++;
 	}
 	
 	public static String totalPorTipo() {
@@ -32,6 +32,7 @@ public class Animal {
 				"Anfibios: " + Anfibio.cantidadAnfibios();
 	}
 	
+	@Override
 	public String toString() {
 		String formato, patron;
 		if(zona.size() == 1) {

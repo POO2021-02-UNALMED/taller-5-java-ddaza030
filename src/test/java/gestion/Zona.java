@@ -10,11 +10,12 @@ public class Zona {
 	public Zona(String nombre, Zoologico zoo) {
 		this.setAnimales(animales);
 		this.setZoo(zoo);
-		zoo.agregarZonas(this);
+		this.zoo.agregarZonas(this);
 	}
 	
 	public Zona() {
-	
+		zoo = new Zoologico();
+		this.zoo.agregarZonas(this);
 	}
 
 	public String getNombre() {
@@ -45,7 +46,6 @@ public class Zona {
 	
 	public void agregarAnimales(Animal animal) {
 		animales.add(animal);
-		animales.get(animales.size()-1).setZona(this);
 	}
 	
 	public int cantidadAnimales() {
