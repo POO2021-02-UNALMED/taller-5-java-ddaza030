@@ -8,7 +8,7 @@ public class Zona {
 	private ArrayList<Animal> animales = new ArrayList<Animal>();
 	
 	public Zona(String nombre, Zoologico zoo) {
-		this.setAnimales(animales);
+		this.nombre = nombre;
 		this.setZoo(zoo);
 		this.zoo.agregarZonas(this);
 	}
