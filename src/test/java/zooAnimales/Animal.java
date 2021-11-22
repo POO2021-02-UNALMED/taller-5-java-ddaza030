@@ -10,7 +10,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private ArrayList<Zona> zona;
+	private ArrayList<Zona> zona = new ArrayList<Zona>();
 	
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.setNombre(nombre);
